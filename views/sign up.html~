@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Sign up</title>
+		<meta charset = "utf-8"/>
+	</head>
+	<body>
+		<form>
+			<input type = "text" name = "username" placeholder = "Username" required = "required"/><br/>
+			<input type = "password" name = "password" placeholder = "Password" required = "required"/><br/>
+			<input type = "password" placeholder = "Confirm password" required = "required"/><br/>
+			<input type = "submit" value = "Sign Up"/>
+		</form>
+		
+		<p>Already have an account? <a href = "sign20%in.html">Sign In</a></p>
+	</body>
+</html>

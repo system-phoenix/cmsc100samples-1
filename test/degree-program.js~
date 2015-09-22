@@ -95,7 +95,6 @@ describe('Degree Program', function () {
 						res.should.have.status(200);
 						res.body.should.have.property('total_units',150);
 						res.body.should.have.property('degree_code','BSCS');
-						res.body.should.have.property('description','Bachelor of Science in Computer Science');
 						done();
 					}
 				})
