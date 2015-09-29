@@ -29,20 +29,22 @@
 			document.write(person.age);/**/
 			
 			function guessNumber(){
-				var x = prompt("enter a number: ");
-				try{
-					if(x == "") throw "empty";
-					if(isNaN(x)) throw "not a number";
-					x = Number(x);
-					if(x < 5) throw "too low";
-					if(x > 10) throw "too high";
-				} catch(err){
-					alert("input is " + err);
+				var guess = Math.floor((Math.random() * 100) + 1);
+				var x;
+				for(;;){
+					x = prompt("Enter a number: ");
+					try{
+						if(x == "") throw "empty";
+						if(isNaN(x)) throw "not a number";
+						x = Number(x);
+						if(x < guess) throw "lower. Should input higher";
+						if(x > guess) throw "higher. Should input lower";
+						if(x == guess) break;
+					} catch(err){
+						alert("input is " + err);
+					}
 				}
-				finally{
-					alert("End of try-catch");
-				}
-				}
+				alert("You found number " + guess + "!");
 			}
 		</script>
 	</body>
