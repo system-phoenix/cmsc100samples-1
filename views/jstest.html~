@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS Test</title>
+		<meta charset = "utf-8"/>
+	</head>
+	<body>
+		<p>Please input grade: </p>
+		<input type = "text" id = "demo1"/>
+		<input type = "button" onclick = "getStatus()" value = "Get Status" id = "getStat"/>
+		
+		<div id = "message"></div>
+		<a href = "javascript:void(document.body.style.backgroundColor = 'yellow');">Click me! <br/></a>
+		<input type = "button" onclick = "guessNumber()" value = "Guess" id = "guess"/>
+		<script>
+			function getStatus(){
+				var grade = document.getElementById("demo1").value;
+				var status = (Number(grade) >= 55) ? "Pass" : "Fail";
+				document.getElementById("message").innerHTML = status;
+			}
+			
+			/*var person = {
+				fname: "Juan",
+				lname: "dela Cruz",
+				age: 50
+			};
+			document.write(person.age);
+			delete person.age;
+			document.write(person.age);/**/
+			
+			function guessNumber(){
+				var x = prompt("enter a number: ");
+				try{
+					if(x == "") throw "empty";
+					if(isNaN(x)) throw "not a number";
+					x = Number(x);
+					if(x < 5) throw "too low";
+					if(x > 10) throw "too high";
+				} catch(err){
+					alert("input is " + err);
+				}
+				finally{
+					alert("End of try-catch");
+				}
+				}
+			}
+		</script>
+	</body>
+</html>
