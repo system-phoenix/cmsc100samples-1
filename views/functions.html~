@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Functions</title>
+		<meta charset = "utf-8"/>
+		<script src = "orias_e7.js"></script>
+	</head>
+	<body>
+		<script>
+			var car1 = new car("qwe123", "honda", "black");
+			car1.startCar();
+			document.write(car1.speed);
+			car1.accelerate(5);
+			car1.accelerate(7);
+			document.write(car1.speed);
+			car1.decelerate(3);
+			document.write(car1.speed);
+			car1.stopCar();
+			car1.repaintCar("orange");
+			document.write(car1.color + car1.speed);
+		</script>
+	</body>
+</html>
