@@ -41,6 +41,11 @@ $(document).ready(function(){
 				console.log(resp);
 			});
 	});
+	$("#reset").click(function(){
+		$("input:checkbox[class=check]").each(function () {
+				$(this).prop("checked", false);
+		});
+	});/**/
 	$("#reverse").click(function(){
 		$("input:checkbox[class=check]").each(function () {
 			if($(this).is(":checked")){
